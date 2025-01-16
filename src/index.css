@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Rage Italic";
+  src: url("/font/RAGE_1.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
