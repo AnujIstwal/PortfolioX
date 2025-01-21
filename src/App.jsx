@@ -1,24 +1,45 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import Marquee from "react-fast-marquee";
 import About from "./pages/About";
-import Education from "./pages/Education";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Achievements from "./pages/Achievements";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  //Image Preloading
+  const imageSrc = "anuj.png";
+
+  useEffect(() => {
+    // Simulate a delay for loading (e.g., fetching data)
+    const timer = setTimeout(() => {
+      const img = new Image();
+      img.src = imageSrc;
+      img.onload = () => setIsLoading(false);
+    }, 2000); // Adjust the timeout as needed
+
+    return () => clearTimeout(timer);
+  }, [imageSrc]);
+
+  if (isLoading)
+    return (
+      <div className="relative flex h-full w-full items-center justify-center rounded-3xl bg-[#1A1A1A] transition-all">
+        <Loader />
+      </div>
+    );
+
   return (
-    <div>
-      <Routes>
-        <Route path="/*" element={<Home />} index />
-        <Route path="/about" element={<About />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/achievements" element={<Achievements />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div className="h-full w-full flex-col items-center justify-center bg-[#E6E6E6] transition-all sm:px-6 sm:py-4">
+      <Home />
+      <Marquee className="flex h-20 gap-6" autoFill>
+        <img src="marquee/Scaler.png" className="h-8" />
+        <img src="marquee/coursera.png" className="h-8" />
+        <img src="marquee/nptel.png" className="h-8" />
+        <img src="marquee/internshala.png" className="h-8" />
+        <img src="marquee/infosys_Springboard.png" className="h-8" />
+        <img src="marquee/swayam.png" className="h-8" />
+      </Marquee>
+      <About />
     </div>
   );
 }

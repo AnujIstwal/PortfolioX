@@ -6,9 +6,20 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "Rage Italic";
   src: url("/font/RAGE_1.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+.rfm-marquee {
+  column-gap: 1.5rem;
 }

@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SkillIcon from "./SkillIcon";
+
+import { FaReact } from "react-icons/fa";
 
 const imageVariants = {
   hidden: {
@@ -58,21 +61,24 @@ export default function HomeCenterSection() {
 
           {/* Icon Section */}
           <div className="absolute inset-0 z-50">
-            <img src="React.png" className="absolute left-16 top-36 w-20" />
-            <img src="Figma.png" className="absolute bottom-48 left-10 w-20" />
-            <img src="Node.png" className="absolute bottom-10 left-16 w-20" />
-            <img
-              src="Firebase.png"
-              className="absolute bottom-10 right-16 w-20"
-            />
-            <img
-              src="Tailwindcss.png"
-              className="absolute right-16 top-36 w-20"
-            />
-            <img
-              src="MongoDb.png"
-              className="absolute bottom-48 right-10 w-20"
-            />
+            <SkillIcon className="absolute left-16 top-36 rotate-6">
+              <img src="icons/React.svg" className="w-12" />
+            </SkillIcon>
+            <SkillIcon className="absolute bottom-48 left-10 rotate-2">
+              <img src="icons/Figma.svg" className="h-10" />
+            </SkillIcon>
+            <SkillIcon className="absolute bottom-10 left-16 -rotate-6">
+              <img src="icons/Node.svg" className="w-12" />
+            </SkillIcon>
+            <SkillIcon className="absolute bottom-10 right-16 rotate-6">
+              <img src="icons/Firebase.svg" className="h-11" />
+            </SkillIcon>
+            <SkillIcon className="absolute right-16 top-36 -rotate-6">
+              <img src="icons/Tailwindcss.svg" className="w-12" />
+            </SkillIcon>
+            <SkillIcon className="absolute bottom-48 right-10 rotate-3">
+              <img src="icons/Mongo.svg" className="w-12" />
+            </SkillIcon>
           </div>
         </div>
       </div>
