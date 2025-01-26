@@ -1,13 +1,12 @@
 import Marquee from "react-fast-marquee";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
-  //Image Preloading
   const imageSrc = "anuj.png";
 
   useEffect(() => {
@@ -18,13 +17,15 @@ function App() {
       img.onload = () => setIsLoading(false);
     }, 2000); // Adjust the timeout as needed
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); // Cleanup timeout on unmount
   }, [imageSrc]);
 
   if (isLoading)
     return (
-      <div className="relative flex h-full w-full items-center justify-center rounded-3xl bg-[#1A1A1A] transition-all">
-        <Loader />
+      <div className="flex h-screen w-full items-center justify-center bg-[#E6E6E6] transition-all sm:px-6 sm:py-4">
+        <div className="relative flex h-full w-full items-center justify-center rounded-3xl bg-[#1A1A1A] transition-all">
+          <Loader />
+        </div>
       </div>
     );
 
@@ -40,6 +41,7 @@ function App() {
         <img src="marquee/swayam.png" className="h-8" />
       </Marquee>
       <About />
+      <Projects />
     </div>
   );
 }

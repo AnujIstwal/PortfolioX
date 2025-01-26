@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const education = [
   {
@@ -27,7 +28,12 @@ const education = [
 
 export default function Education() {
   return (
-    <div className="h-full w-full rounded-[1.6rem] bg-[#EEEEEE] px-8 py-6">
+    <motion.div
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ ease: "easeIn", duration: 0.6 }}
+      className="h-full w-full rounded-[1.6rem] bg-[#EEEEEE] px-8 py-6 shadow-sm"
+    >
       <div className="flex w-full items-center justify-between border-b border-gray-300 pb-2">
         <h3 className="text-lg font-bold text-gray-800">Education</h3>
         <button className="text-lg text-gray-600">
@@ -56,7 +62,7 @@ export default function Education() {
               </p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-center font-extrabold text-green-600 sm:text-[1.1rem]">
+              <p className="text-center font-extrabold text-green-600 sm:text-[1rem]">
                 {data.score}
               </p>
               <p className="text-center text-sm text-[#6F6D6D] sm:text-[.8rem]">
@@ -66,6 +72,6 @@ export default function Education() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { IoMdArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const details = [
   { field: "Name", value: "Anuj Kumar" },
@@ -12,7 +12,12 @@ const details = [
 
 export default function PersonalDetails() {
   return (
-    <div className="flex h-full w-full flex-col items-center gap-2 rounded-3xl bg-[#EEEEEE] px-8 py-6">
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ ease: "easeIn", duration: 0.6 }}
+      className="flex h-full w-full flex-col items-center gap-2 rounded-3xl bg-[#EEEEEE] px-8 py-6 shadow-sm"
+    >
       <div className="flex w-full items-center justify-between border-b border-gray-300 pb-2">
         <h3 className="text-lg font-bold text-gray-800">Details</h3>
       </div>
@@ -31,6 +36,6 @@ export default function PersonalDetails() {
           ))}
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 }
