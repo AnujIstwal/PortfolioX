@@ -2,7 +2,7 @@ import Education from "../components/Education";
 import PersonalDetails from "../components/PersonalDetails";
 import Profile from "../components/Profile";
 import Description from "../components/Description";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 
 export default function About() {
   return (

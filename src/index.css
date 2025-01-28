@@ -20,6 +20,20 @@ body {
   font-style: normal;
 }
 
-.rfm-marquee {
-  column-gap: 1.5rem;
+/* 🔵 Pagination Styling */
+.custom-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #e2e2e2; /* Gray-400 */
+  transition: background-color 0.4s ease-in-out;
+}
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff; /* Blue-600 */
+  transform: scale(1.1);
+}
+
+/* 🔴 Navigation Disabled State */
+.custom-prev.swiper-button-disabled,
+.custom-next.swiper-button-disabled {
+  opacity: 0.4;
 }
