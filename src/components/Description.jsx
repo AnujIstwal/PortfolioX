@@ -6,7 +6,7 @@ export default function Description() {
       // initial={{ x: 100, opacity: 0 }}
       // whileInView={{ x: 0, opacity: 1 }}
       // transition={{ ease: "easeIn", duration: 0.6 }}
-      className="sm:max-w-auto max-w-sm"
+      className="sm:max-w-auto sm:px-auto max-w-sm px-2"
     >
       <p className="font-semibold text-[#656464]">Hi there, I&apos;m</p>
       <p className="my-3 bg-gradient-to-r from-[#E52D39] to-[#6129A6] bg-clip-text text-2xl font-extrabold leading-8 text-transparent">
