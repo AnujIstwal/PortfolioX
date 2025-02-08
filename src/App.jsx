@@ -73,7 +73,7 @@ function App() {
 
   return (
     <NavbarProvider>
-      <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-8 overflow-y-hidden bg-[#F9F9F9] sm:px-6">
+      <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-8 overflow-y-hidden bg-[#F9F9F9] px-2 sm:px-6">
         <Navbar />
         {/* <CustomCursor /> */}
 

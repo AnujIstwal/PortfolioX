@@ -220,7 +220,7 @@ export default function Navbar() {
                 to="contact"
                 smooth={true}
                 duration={2000}
-                className="cursor-pointer hover:bg-zinc-200/60"
+                className="cursor-pointer"
               >
                 <IoCall className="text-lg text-zinc-700" />
               </Link>
