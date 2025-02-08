@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const details = [
@@ -13,10 +12,10 @@ const details = [
 export default function PersonalDetails() {
   return (
     <motion.div
-      initial={{ x: -100, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ ease: "easeIn", duration: 0.6 }}
-      className="flex h-full w-full flex-col items-center gap-2 rounded-3xl bg-[#EEEEEE] px-8 py-6 shadow-sm"
+      // initial={{ x: -100, opacity: 0 }}
+      // whileInView={{ x: 0, opacity: 1 }}
+      // transition={{ ease: "easeIn", duration: 0.6 }}
+      className="md:max-w-auto flex h-full w-full max-w-md flex-col items-center gap-2 rounded-3xl bg-[#EEEEEE] px-8 py-6 shadow-sm"
     >
       <div className="flex w-full items-center justify-between border-b border-gray-300 pb-2">
         <h3 className="text-lg font-bold text-gray-800">Details</h3>
@@ -24,8 +23,8 @@ export default function PersonalDetails() {
 
       <table className="min-w-full">
         <tbody>
-          {details.map((data) => (
-            <tr className="text-[.9rem]">
+          {details.map((data, index) => (
+            <tr key={index} className="text-[.9rem]">
               <td className="py-1 pr-8">
                 <h3 className="font-semibold">{data.field}</h3>
               </td>

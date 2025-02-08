@@ -1,8 +1,8 @@
-import React from "react";
 import SkillBar from "./SkillBar";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { resume_download_link } from "../utils/data";
 
 const skills = [
   "MERN stack",
@@ -16,29 +16,13 @@ const skills = [
   "React",
 ];
 
-// Animation Variants
-const containerVariants = {
-  hidden: {
-    opacity: 0.5,
-    x: -50, // Start slightly below
-  },
-  visible: {
-    opacity: 1,
-    x: 0, // Slide to its original position
-    transition: {
-      duration: 0.8, // Animation duration
-      ease: "easeInOut",
-    },
-  },
-};
-
 export default function HomeLeftSection() {
   return (
-    <div className="z-20 order-2 flex w-full flex-col items-start justify-center gap-5 overflow-hidden bg-transparent px-5 pb-5 md:order-first md:w-80 md:justify-end md:p-5">
+    <div className="t z-20 order-2 flex w-full max-w-md flex-col items-center justify-center gap-5 overflow-hidden px-5 pb-5 md:order-first md:w-80 md:items-start md:justify-end md:p-5">
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+        initial={{ opacity: 0, y: 300 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 3.5, ease: "easeInOut" }}
         className="flex h-52 w-full flex-col gap-2 rounded-3xl border border-[#4d4d4d] bg-[#262626] px-6 py-4"
       >
         <span className="border-b border-b-[#4D4D4D] pb-2 font-semibold text-[#E6E6E6]">
@@ -81,9 +65,9 @@ export default function HomeLeftSection() {
 
       {/* Pills Section */}
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+        initial={{ opacity: 0, y: 300 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 3.8, ease: "easeInOut" }}
         className="flex w-full flex-col gap-6 rounded-3xl bg-gradient-to-r from-[#C1C1C1] to-[#a5a5a5] px-5 py-4"
       >
         <div
@@ -102,27 +86,29 @@ export default function HomeLeftSection() {
       </motion.div>
 
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.5, ease: "easeIn" }}
+        initial={{ opacity: 0, y: 300 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 4, ease: "easeInOut" }}
         className="flex w-full items-center gap-5 text-[#E6E6E6]"
       >
-        <button
-          type="button"
+        <a
+          href="https://drive.google.com/file/d/1XeMUxrg1gzYQkt9xZWv-pl4ZbHlaG3Zw/view?usp=sharing"
+          target="_blank"
           className="group flex grow items-center justify-center gap-1 rounded-[1rem] bg-[#4D4D4D] px-8 py-5 font-medium transition-all duration-300 hover:bg-[#242424]"
         >
           <span className="transition-all duration-300 group-hover:-translate-x-2/4 group-hover:opacity-0">
             View Resume
           </span>
           <IoMdArrowRoundForward className="text-lg transition-all duration-300 group-hover:-translate-x-12 group-hover:text-2xl" />
-        </button>
+        </a>
 
-        <button
-          type="button"
-          className="group flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500 p-6 transition-all duration-300 hover:bg-red-600"
+        <a
+          href={resume_download_link}
+          download
+          className="group flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl bg-red-500 p-6 transition-all duration-300 hover:bg-red-600"
         >
           <FaDownload className="text-lg transition-all duration-300 group-hover:rotate-180 group-hover:scale-125" />
-        </button>
+        </a>
       </motion.div>
     </div>
   );

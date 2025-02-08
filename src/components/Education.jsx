@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { motion } from "framer-motion";
 
@@ -29,25 +28,27 @@ const education = [
 export default function Education() {
   return (
     <motion.div
-      initial={{ x: 100, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ ease: "easeIn", duration: 0.6 }}
-      className="h-full w-full rounded-[1.6rem] bg-[#EEEEEE] px-8 py-6 shadow-sm"
+      // initial={{ x: 100, opacity: 0 }}
+      // whileInView={{ x: 0, opacity: 1 }}
+      // transition={{ ease: "easeIn", duration: 0.6 }}
+      className="md:max-w-auto h-full w-full max-w-md rounded-[1.6rem] bg-[#EEEEEE] px-8 py-6 shadow-sm"
     >
       <div className="flex w-full items-center justify-between border-b border-gray-300 pb-2">
         <h3 className="text-lg font-bold text-gray-800">Education</h3>
-        <button className="text-lg text-gray-600">
+        <a
+          target="_blank"
+          href="https://drive.google.com/drive/folders/1KPhMD9nvRWJgJq6FIeRMON8YdElquhd8?usp=drive_link"
+          className="text-lg text-gray-600"
+        >
           <span className="inline-block">
             <IoMdArrowRoundForward />
           </span>
-        </button>
+        </a>
       </div>
 
-      {/* Visible on mobile device */}
-
       <div className="flex w-full flex-col gap-4 pt-4">
-        {education.map((data) => (
-          <div className="flex items-center justify-center gap-2">
+        {education.map((data, index) => (
+          <div key={index} className="flex items-center justify-center gap-2">
             <img
               src={data.img}
               alt={data.school}

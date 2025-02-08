@@ -1,5 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import { motion } from "framer-motion";
+import {
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+  Autoplay,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,106 +24,186 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <div className="flex w-full flex-col bg-gradient-to-tr from-[#000000] via-[#505050] to-[#242424]">
-      <div className="relative flex w-full flex-col items-center justify-center py-10">
-        {/* Custom Navigation Buttons */}
-        <button className="custom-prev absolute left-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-all hover:bg-zinc-100/50 sm:left-[4rem]">
-          <GoArrowLeft className="text-4xl transition-all hover:text-gray-900" />
-        </button>
-        <button className="custom-next absolute right-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-all hover:bg-zinc-100/50 sm:right-[4rem]">
-          <GoArrowRight className="text-4xl transition-all hover:text-gray-900" />
-        </button>
-        <Swiper
-          modules={[Navigation, Pagination, EffectCoverflow]}
-          effect="coverflow"
-          grabCursor={true}
-          centeredSlides={true}
-          initialSlide={3}
-          coverflowEffect={{
-            rotate: 5,
-            stretch: 0,
-            depth: 150, // Adjust depth for 3D effect
-            modifier: 5,
-            slideShadows: false,
-          }}
-          breakpoints={{
-            400: { slidesPerView: 1 }, // ✅ For small screens
-            640: { slidesPerView: 2 }, // ✅ Medium screens
-            1024: { slidesPerView: 3 }, // ✅ Large screens
-          }}
-          pagination={{ el: ".custom-pagination", clickable: true }} // Custom Pagination
-          navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
-          className="sm:W-[80%] w-[100%] max-w-7xl"
+    <section
+      id="certificates"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-y-2"
+    >
+      <div className="h-14 w-full"></div>
+      <div className="flex w-full flex-col gap-y-4 py-4 sm:py-8">
+        {/* Heading */}
+        <motion.span
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className="md:5xl text-center text-4xl font-bold text-[#3a3a3a]"
         >
-          {certificates.map((cert) => (
-            <SwiperSlide
-              key={cert.id}
-              className="relative w-full py-8 transition-all duration-300 sm:w-80 md:w-96 lg:w-[420px]"
-            >
-              {({ isActive }) => (
-                <img
-                  src={cert.src}
-                  alt={cert.alt}
-                  className={`h-auto w-full rounded-2xl border border-slate-400 transition-all duration-300 ${isActive ? "shadow-[0px_10px_20px_-12px_rgb(0,0,0,.6)]" : "opacity-65 shadow-lg"} `}
-                />
-              )}
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          Learned from the best
+          <motion.span
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 1, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-3 block text-2xl font-medium text-gray-500"
+          >
+            100% verified Certificates
+          </motion.span>
+        </motion.span>
 
-        {/* Custom Pagination */}
-        <div className="custom-pagination absolute bottom-0 mt-4 flex justify-center space-x-2">
-          {certificates.map((cert, index) => (
-            <span
-              key={index}
-              className="dot h-3 w-3 cursor-pointer rounded-full transition-all hover:bg-gray-700"
-            ></span>
-          ))}
-        </div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          className="relative flex w-full flex-col items-center justify-center py-10"
+        >
+          {/* Custom Navigation Buttons */}
+          <button className="custom-prev absolute left-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-colors hover:bg-zinc-100/50 sm:left-[4rem]">
+            <GoArrowLeft className="text-4xl transition-all hover:text-gray-900" />
+          </button>
+          <button className="custom-next absolute right-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-colors hover:bg-zinc-100/50 sm:right-[4rem]">
+            <GoArrowRight className="text-4xl transition-colors hover:text-gray-900" />
+          </button>
+          <Swiper
+            modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            initialSlide={3}
+            speed={600}
+            loop={true}
+            autoplay={{ delay: 1500, disableOnInteraction: false }}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 0, // Adjust depth for 3D effect
+              modifier: 0,
+              slideShadows: false,
+            }}
+            spaceBetween={30}
+            breakpoints={{
+              400: { slidesPerView: 1 }, // ✅ For small screens
+              640: { slidesPerView: 3 }, // ✅ Medium screens
+              1024: { slidesPerView: 4 }, // ✅ Large screens
+            }}
+            pagination={{ el: ".custom-pagination", clickable: true }} // Custom Pagination
+            navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+            className="w-[100%] max-w-7xl"
+          >
+            {certificates.map((cert) => (
+              <SwiperSlide
+                key={cert.id}
+                className="relative w-full py-8 sm:w-80 md:w-96 lg:w-[420px]"
+              >
+                {({ isActive }) => (
+                  <motion.img
+                    src={cert.src}
+                    alt={cert.alt}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: isActive ? 1.1 : 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className={`h-auto w-full rounded-2xl border border-slate-400 ${isActive ? "shadow-[0px_10px_20px_-12px_rgb(0,0,0,.6)]" : "shadow-lg"} `}
+                  />
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <button className="rounded-2xl bg-zinc-400/60 px-4 py-4 text-sm text-white">
-          View all
-        </button>
+          {/* Custom Pagination */}
+          <div className="custom-pagination absolute bottom-0 mt-4 flex justify-center space-x-2">
+            {certificates.map((cert, index) => (
+              <span
+                key={index}
+                className="dot h-3 w-3 cursor-pointer rounded-full transition-colors hover:bg-gray-700"
+              ></span>
+            ))}
+          </div>
+        </motion.div>
+
+        <a
+          href="https://drive.google.com/drive/folders/1q7OIyCkH52cLPjhTWvApivaec07Vme-M?usp=drive_link"
+          target="_blank"
+          className="mx-auto rounded-2xl bg-zinc-700 px-4 py-4 text-sm text-white"
+        >
+          View all certificates
+        </a>
+
+        {/* Companies name */}
+        <motion.div
+          initial={{ y: 200, width: 0 }}
+          whileInView={{ y: 0, width: "100%" }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          viewport={{ once: true }}
+          className="mx-auto mt-6 flex w-full flex-col items-center justify-center gap-y-8 rounded-[1.7rem] bg-gradient-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 py-12"
+        >
+          <motion.span
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.8, delay: 1 }}
+            viewport={{ once: true }}
+            className="text-lg font-bold text-zinc-500"
+          >
+            Certified by the best in the industry
+          </motion.span>
+
+          <div className="mx-auto grid max-w-4xl grid-cols-3 items-center justify-items-center gap-x-8 gap-y-8 px-4 sm:gap-x-16">
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 0.8, delay: 1.2 }}
+              viewport={{ once: true }}
+              src="companies/1.png"
+              alt="Company 1"
+              className="w-36 opacity-80 grayscale"
+            />
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.4 }}
+              viewport={{ once: true }}
+              src="companies/2.png"
+              alt="Company 2"
+              className="w-40 opacity-80 grayscale"
+            />
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.6 }}
+              viewport={{ once: true }}
+              src="companies/3.png"
+              alt="Company 3"
+              className="w-24 opacity-80 grayscale"
+            />
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
+              viewport={{ once: true }}
+              src="companies/4.png"
+              alt="Company 4"
+              className="w-24 opacity-80 grayscale"
+            />
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.7 }}
+              viewport={{ once: true }}
+              src="companies/5.png"
+              alt="Company 5"
+              className="w-32 opacity-80 grayscale"
+            />
+            <motion.img
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.6 }}
+              viewport={{ once: true }}
+              src="companies/6.png"
+              alt="Company 6"
+              className="w-32 opacity-80 grayscale"
+            />
+          </div>
+        </motion.div>
       </div>
-
-      {/* Companies name */}
-      <div className="flex w-full flex-col items-center justify-center gap-y-6 bg-black/40 py-8">
-        <h1 className="text-lg font-bold text-zinc-400">
-          Certified by the best in the industry
-        </h1>
-        <div className="mx-auto grid max-w-4xl grid-cols-3 items-center justify-items-center gap-x-16 gap-y-8">
-          <img
-            src="companies/1.png"
-            alt="Company 1"
-            className="w-40 opacity-80 grayscale"
-          />
-          <img
-            src="companies/2.png"
-            alt="Company 2"
-            className="w-40 opacity-80 grayscale"
-          />
-          <img
-            src="companies/3.png"
-            alt="Company 3"
-            className="w-28 opacity-80 grayscale"
-          />
-          <img
-            src="companies/4.png"
-            alt="Company 4"
-            className="w-28 opacity-80 grayscale"
-          />
-          <img
-            src="companies/5.png"
-            alt="Company 5"
-            className="w-28 opacity-80 grayscale"
-          />
-          <img
-            src="companies/6.png"
-            alt="Company 6"
-            className="w-28 opacity-80 grayscale"
-          />
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }

@@ -2,43 +2,75 @@ import Education from "../components/Education";
 import PersonalDetails from "../components/PersonalDetails";
 import Profile from "../components/Profile";
 import Description from "../components/Description";
-//import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div
+    <section
       id="about"
-      className="relative mx-auto flex h-full w-full flex-col items-center justify-center rounded-3xl bg-[#D8D8D8] px-2 py-4 backdrop-opacity-100 sm:w-[90%] sm:px-10 sm:py-8"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-y-2"
     >
-      <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-br from-red-200 via-purple-200 to-yellow-100 opacity-50 blur-2xl"></div>
-      <div className="flex h-full w-full flex-col sm:w-[70%]">
-        <span className="md:5xl -rotate-12 text-center font-rage text-4xl font-bold text-red-500 transition-all hover:rotate-0">
-          About me
-        </span>
-        <div className="flex h-full w-full flex-col items-center justify-center sm:flex-row">
-          {/* Profile */}
-          <div className="flex h-full w-full basis-2/5 items-center justify-center p-4 sm:p-6">
-            <Profile />
+      <div className="h-14 w-full"></div>
+      <div className="relative mx-auto flex h-full w-full flex-col items-center justify-center rounded-3xl px-2 py-4 backdrop-opacity-100 md:w-[90%] md:px-10 md:py-8">
+        <div className="flex h-full w-full flex-col gap-y-4 lg:w-[70%]">
+          <motion.span
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+            viewport={{ once: true }}
+            className="md:5xl text-center text-4xl font-bold text-[#3a3a3a]"
+          >
+            Know more about me
+          </motion.span>
+          <div className="flex h-full w-full flex-col items-center justify-center sm:flex-row">
+            {/* Profile */}
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex h-full w-full basis-2/5 items-center justify-center p-4 sm:p-6"
+            >
+              <Profile />
+            </motion.div>
+
+            {/* Description */}
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="h-full basis-3/5 px-4 py-6"
+            >
+              <Description />
+            </motion.div>
           </div>
 
-          {/* Description */}
-          <div className="h-full basis-3/5 px-4 py-6">
-            <Description />
-          </div>
-        </div>
+          <div className="flex w-full flex-col items-center justify-center sm:flex-row">
+            {/* personal */}
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex h-full w-full basis-2/5 flex-col items-center px-4 py-5 sm:w-auto"
+            >
+              <PersonalDetails />
+            </motion.div>
 
-        <div className="flex w-full flex-col items-center justify-center sm:flex-row">
-          {/* personal */}
-          <div className="flex h-full w-full basis-2/5 flex-col items-center px-4 py-5 sm:w-auto">
-            <PersonalDetails />
-          </div>
-
-          {/* Education */}
-          <div className="flex h-full w-full basis-3/5 items-center justify-center px-4 py-5 sm:w-auto">
-            <Education />
+            {/* Education */}
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="flex h-full w-full basis-3/5 items-center justify-center px-4 py-5 sm:w-auto"
+            >
+              <Education />
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

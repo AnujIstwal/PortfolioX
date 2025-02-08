@@ -24,11 +24,11 @@ body {
 .custom-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #e2e2e2; /* Gray-400 */
+  background-color: #585858; /* Gray-400 */
   transition: background-color 0.4s ease-in-out;
 }
 .custom-pagination .swiper-pagination-bullet-active {
-  background-color: #ffffff; /* Blue-600 */
+  background-color: #272727; /* Blue-600 */
   transform: scale(1.1);
 }
 

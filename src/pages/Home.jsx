@@ -1,26 +1,29 @@
-import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Loader from "../components/Loader";
 import HomeRightSection from "../components/HomeRightSection";
 import HomeCenterSection from "../components/HomeCenterSection";
 import HomeLeftSection from "../components/HomeLeftSection";
-import { IoMdArrowDown } from "react-icons/io";
+import { motion } from "framer-motion";
+import ScrollToNext from "../components/ScrollToNext";
 
 export default function Home() {
   return (
-    <>
-      {/* <!-- Curved shape div --> */}
-      <div className="relative flex h-full w-full flex-col rounded-3xl bg-[#1A1A1A]">
-        <Navbar />
-        <div className="flex h-full w-full flex-col md:flex-row">
+    <section
+      id="home"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-y-2 md:h-screen"
+    >
+      <div className="h-14 w-full"></div>
+      <motion.div
+        initial={{ y: 800 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 3, delay: 1, ease: "easeInOut" }}
+        className="relative flex h-full w-full flex-col rounded-3xl bg-[#1A1A1A] md:rounded-[1.7rem]"
+      >
+        <div className="relative flex h-full w-full flex-col items-center justify-center pt-8 md:flex-row md:items-end">
           <HomeLeftSection />
           <HomeCenterSection />
           <HomeRightSection />
         </div>
-        <div className="absolute bottom-0 left-[48%] z-30 animate-bounce rounded-full bg-gray-800 p-3 text-3xl text-gray-100">
-          <IoMdArrowDown />
-        </div>
-      </div>
-    </>
+      </motion.div>
+      <ScrollToNext />
+    </section>
   );
 }
