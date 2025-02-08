@@ -13,7 +13,7 @@ export default function HomeCenterSection() {
           transition={{ duration: 0.8, delay: 3.5, ease: "easeInOut" }}
           className="absolute left-[30%] top-[14%] z-0 -translate-x-1/2 -translate-y-1/2 transform"
         >
-          <h1 className="font-extrabold-mobile max-w-[250px] text-4xl text-[#ededed] antialiased md:max-w-[300px] md:text-6xl">
+          <h1 className="max-w-[250px] text-5xl font-black text-[#ededed] antialiased md:max-w-[300px] md:text-6xl md:font-extrabold">
             <span className="md:4xl font-rage text-3xl text-red-500">
               I&apos;m
             </span>{" "}

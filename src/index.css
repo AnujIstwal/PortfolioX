@@ -20,10 +20,6 @@ body {
   font-style: normal;
 }
 
-.font-extrabold-mobile {
-  font-weight: 800 !important;
-}
-
 /* 🔵 Pagination Styling */
 .custom-pagination .swiper-pagination-bullet {
   width: 12px;
