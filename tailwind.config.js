@@ -15,5 +15,9 @@ export default {
       },
     },
   },
+  safelist: [
+    "font-bold",
+    "font-extrabold", // ✅ Add this to prevent purging
+  ],
   plugins: [],
 };

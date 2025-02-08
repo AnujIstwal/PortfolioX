@@ -130,9 +130,9 @@ export default function Certificates() {
 
         {/* Companies name */}
         <motion.div
-          initial={{ y: 200, width: 0 }}
-          whileInView={{ y: 0, width: "100%" }}
-          transition={{ ease: "easeOut", duration: 2.5, delay: 0.5 }}
+          initial={{ y: 200 }}
+          whileInView={{ y: 0 }}
+          transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
           className="mx-auto mt-6 flex w-full flex-col items-center justify-center gap-y-8 rounded-[1.7rem] bg-gradient-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 py-12"
         >

@@ -12,7 +12,7 @@ export default function Contact() {
       className="relative flex h-full w-full flex-col items-center justify-center gap-y-2 md:h-screen"
     >
       <div className="h-14 w-full"></div>
-      <div className="h-full w-full px-4 py-6">
+      <div className="h-full w-full py-6 sm:px-4">
         <motion.div
           initial={{ y: 450 }}
           whileInView={{ y: 0 }}
