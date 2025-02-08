@@ -14,9 +14,9 @@ export default function Contact() {
       <div className="h-14 w-full"></div>
       <div className="h-full w-full px-4 py-6">
         <motion.div
-          initial={{ y: 500 }}
+          initial={{ y: 450 }}
           whileInView={{ y: 0 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
+          transition={{ duration: 1.8, ease: "easeOut" }}
           viewport={{ once: true }}
           className="relative flex h-full w-full items-center justify-center rounded-[2rem] bg-gradient-to-br from-[#363636] from-[0%] via-[#000000] via-[55%] to-[#181818] to-[100%]"
         >

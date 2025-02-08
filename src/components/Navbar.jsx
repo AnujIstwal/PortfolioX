@@ -1,11 +1,17 @@
-import { IoCall, IoHome, IoPerson } from "react-icons/io5";
-import { IoMail } from "react-icons/io5";
+import {
+  IoCall,
+  IoHome,
+  IoHomeOutline,
+  IoPerson,
+  IoPersonOutline,
+} from "react-icons/io5";
+
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { NavbarContext } from "../context/NavbarContextFile";
 import { Link } from "react-scroll";
-import { PiCertificateFill } from "react-icons/pi";
-import { AiFillProject } from "react-icons/ai";
+import { PiCertificate, PiCertificateFill } from "react-icons/pi";
+import { AiFillProject, AiOutlineProject } from "react-icons/ai";
 
 export default function Navbar() {
   const { activePage, setActivePage } = useContext(NavbarContext);
@@ -98,12 +104,7 @@ export default function Navbar() {
 
             {/* Mobile Navbar */}
             <div className="flex w-full items-center justify-center text-zinc-800 sm:hidden">
-              <motion.ul
-                initial={{ y: -50, opacity: 0.5 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex space-x-8"
-              >
+              <ul className="flex space-x-8">
                 <li
                   className={
                     activePage === "home"
@@ -120,7 +121,12 @@ export default function Navbar() {
                     duration={1500}
                     onClick={() => setActivePage("home")}
                   >
-                    <IoHome className="text-2xl" />
+                    <IoHome
+                      className={`text-2xl ${activePage === "home" ? "inline-block" : "hidden"}`}
+                    />
+                    <IoHomeOutline
+                      className={`text-2xl ${activePage === "home" ? "hidden" : "inline-block"}`}
+                    />
                   </Link>
                 </li>
                 <li
@@ -139,7 +145,12 @@ export default function Navbar() {
                     duration={1500}
                     onClick={() => setActivePage("about")}
                   >
-                    <IoPerson className="text-2xl" />
+                    <IoPerson
+                      className={`text-2xl ${activePage === "about" ? "inline-block" : "hidden"}`}
+                    />
+                    <IoPersonOutline
+                      className={`text-2xl ${activePage === "about" ? "hidden" : "inline-block"}`}
+                    />
                   </Link>
                 </li>
                 <li
@@ -158,7 +169,12 @@ export default function Navbar() {
                     duration={1500}
                     onClick={() => setActivePage("certificates")}
                   >
-                    <PiCertificateFill className="text-2xl" />
+                    <PiCertificateFill
+                      className={`text-2xl ${activePage === "certificates" ? "inline-block" : "hidden"}`}
+                    />
+                    <PiCertificate
+                      className={`text-2xl ${activePage === "certificates" ? "hidden" : "inline-block"}`}
+                    />
                   </Link>
                 </li>
                 <li
@@ -177,15 +193,20 @@ export default function Navbar() {
                     duration={1500}
                     onClick={() => setActivePage("projects")}
                   >
-                    <AiFillProject className="text-2xl" />
+                    <AiFillProject
+                      className={`text-2xl ${activePage === "projects" ? "inline-block" : "hidden"}`}
+                    />
+                    <AiOutlineProject
+                      className={`text-2xl ${activePage === "projects" ? "hidden" : "inline-block"}`}
+                    />
                   </Link>
                 </li>
-              </motion.ul>
+              </ul>
             </div>
 
             <button
               type="button"
-              className="hidden rounded-xl border border-zinc-500 px-6 py-2 transition-all hover:bg-zinc-200/60 sm:block"
+              className="hidden rounded-xl border border-zinc-500 px-6 py-2 transition-colors hover:bg-zinc-200/60 sm:block"
             >
               <Link to="contact" smooth={true} duration={2000}>
                 Contact
@@ -193,10 +214,16 @@ export default function Navbar() {
             </button>
             <div
               type="button"
-              className="flex gap-2 rounded-2xl border border-zinc-500 p-3 sm:hidden"
+              className="flex gap-2 rounded-xl border border-zinc-500 p-3 sm:hidden"
             >
-              <IoCall className="text-lg text-zinc-700" />
-              <IoMail className="text-lg text-zinc-700" />
+              <Link
+                to="contact"
+                smooth={true}
+                duration={2000}
+                className="cursor-pointer hover:bg-zinc-200/60"
+              >
+                <IoCall className="text-lg text-zinc-700" />
+              </Link>
             </div>
           </motion.div>
         </nav>

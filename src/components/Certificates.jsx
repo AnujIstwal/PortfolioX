@@ -59,7 +59,7 @@ export default function Certificates() {
         >
           {/* Custom Navigation Buttons */}
           <button className="custom-prev absolute left-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-colors hover:bg-zinc-100/50 sm:left-[4rem]">
-            <GoArrowLeft className="text-4xl transition-all hover:text-gray-900" />
+            <GoArrowLeft className="text-4xl transition-colors hover:text-gray-900" />
           </button>
           <button className="custom-next absolute right-1 top-1/2 z-10 -translate-y-1/2 transform rounded-full border border-zinc-300 bg-zinc-100 p-1 transition-colors hover:bg-zinc-100/50 sm:right-[4rem]">
             <GoArrowRight className="text-4xl transition-colors hover:text-gray-900" />
@@ -132,7 +132,7 @@ export default function Certificates() {
         <motion.div
           initial={{ y: 200, width: 0 }}
           whileInView={{ y: 0, width: "100%" }}
-          transition={{ ease: "easeOut", duration: 1.5 }}
+          transition={{ ease: "easeOut", duration: 2.5, delay: 0.5 }}
           viewport={{ once: true }}
           className="mx-auto mt-6 flex w-full flex-col items-center justify-center gap-y-8 rounded-[1.7rem] bg-gradient-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 py-12"
         >
