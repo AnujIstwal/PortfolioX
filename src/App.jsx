@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { NavbarProvider } from "./context/NavbarContext";
 
 import Navbar from "./components/Navbar";
@@ -10,8 +9,6 @@ import Loader from "./components/Loader";
 import Certificates from "./components/Certificates";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
-import CustomCursor from "./components/CustomCursor";
-import ScrollToNext from "./components/ScrollToNext";
 
 const imagePaths = [
   "anuj.png",

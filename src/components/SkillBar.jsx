@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 export default function SkillBar({ image, skillName, from, to, barValue }) {
   return (
@@ -30,3 +31,11 @@ export default function SkillBar({ image, skillName, from, to, barValue }) {
     </div>
   );
 }
+
+SkillBar.propTypes = {
+  image: PropTypes.string.isRequired,
+  skillName: PropTypes.string.isRequired,
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+  barValue: PropTypes.number.isRequired,
+};

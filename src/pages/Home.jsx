@@ -2,7 +2,7 @@ import HomeRightSection from "../components/HomeRightSection";
 import HomeCenterSection from "../components/HomeCenterSection";
 import HomeLeftSection from "../components/HomeLeftSection";
 import { motion } from "framer-motion";
-import ScrollToNext from "../components/ScrollToNext";
+// import ScrollToNext from "../components/ScrollToNext";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           <HomeRightSection />
         </div>
       </motion.div>
-      <ScrollToNext />
+      {/* <ScrollToNext /> */}
     </section>
   );
 }
