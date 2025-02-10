@@ -14,9 +14,9 @@ export default function Profile() {
       // initial={{ x: -100, opacity: 0 }}
       // whileInView={{ x: 0, opacity: 1 }}
       // transition={{ ease: "easeIn", duration: 0.6 }}
-      className="flex h-full w-full max-w-sm flex-col items-center gap-6 rounded-[1.6rem] bg-[#EEEEEE] px-6 py-10 shadow-sm"
+      className="flex h-full w-full max-w-sm flex-col items-center gap-6 rounded-[1.6rem] border border-gray-300 bg-[#EEEEEE] px-6 py-10 shadow-sm"
     >
-      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#2B2B2B] to-[#686868]">
+      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#202020] to-[#4d4d4d]">
         <img src="profile.png" className="rounded-full" />
       </div>
       <div className="flex flex-col items-center justify-center">
@@ -26,15 +26,28 @@ export default function Profile() {
         </p>
       </div>
       <div className="flex items-center justify-center gap-6">
-        <span>
-          <FaGithub className="text-3xl text-[#808080] transition-all hover:text-gray-300" />
-        </span>
-        <span>
-          <FaLinkedin className="text-3xl text-[#808080] transition-all hover:text-gray-300" />
-        </span>
-        <span>
-          <FaInstagram className="text-3xl text-[#808080] transition-all hover:text-gray-300" />
-        </span>
+        <a
+          href="https://github.com/AnujIstwal"
+          target="_blank"
+          rel="noreferrer"
+          className="cursor-pointer"
+        >
+          <FaGithub className="text-3xl text-[#808080] transition-all hover:text-gray-500" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/anuj-kumar-393196200/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedin className="text-3xl text-[#808080] transition-all hover:text-gray-500" />
+        </a>
+        <a
+          href="https://www.instagram.com/anujistwal?utm_source=qr&igsh=cXloc2p6ZHFyeTU1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram className="text-3xl text-[#808080] transition-all hover:text-gray-500" />
+        </a>
       </div>
 
       <a

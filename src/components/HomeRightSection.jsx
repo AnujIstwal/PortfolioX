@@ -83,9 +83,13 @@ export default function HomeRightSection() {
           >
             <FaLinkedin className="text-2xl text-[#808080] transition-all hover:text-gray-300" />
           </a>
-          <span>
+          <a
+            href="https://www.instagram.com/anujistwal?utm_source=qr&igsh=cXloc2p6ZHFyeTU1"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaInstagram className="text-2xl text-[#808080] transition-all hover:text-gray-300" />
-          </span>
+          </a>
         </motion.div>
       </div>
     </>

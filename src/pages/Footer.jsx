@@ -61,20 +61,24 @@ export default function Footer() {
                 rel="noreferrer"
                 className="cursor-pointer"
               >
-                <FaGithub className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-300" />
+                <FaGithub className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-500" />
               </a>
               <a
                 href="https://www.linkedin.com/in/anuj-kumar-393196200/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaLinkedin className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-300" />
+                <FaLinkedin className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-500" />
+              </a>
+              <a
+                href="https://www.instagram.com/anujistwal?utm_source=qr&igsh=cXloc2p6ZHFyeTU1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-500" />
               </a>
               <span>
-                <FaInstagram className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-300" />
-              </span>
-              <span>
-                <FaFacebook className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-300" />
+                <FaFacebook className="text-xl text-[#a1a1a1] transition-colors hover:text-gray-500" />
               </span>
             </div>
           </div>
