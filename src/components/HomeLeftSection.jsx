@@ -12,8 +12,6 @@ const skills = [
   "Frontend",
   "Backend",
   "+2",
-  "DevOps",
-  "React",
 ];
 
 export default function HomeLeftSection() {

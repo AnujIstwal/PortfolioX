@@ -56,7 +56,7 @@ function App() {
           // Wait for an extra 2 seconds before hiding the loader
           setTimeout(() => {
             setIsLoading(false);
-          }, 1500); // 2000ms delay
+          }, 2000); // 2000ms delay
         }
       };
     });

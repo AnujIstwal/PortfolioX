@@ -130,16 +130,16 @@ export default function Certificates() {
 
         {/* Companies name */}
         <motion.div
-          initial={{ y: 200 }}
-          whileInView={{ y: 0 }}
-          transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
           viewport={{ once: true }}
           className="mx-auto mt-6 flex w-full flex-col items-center justify-center gap-y-8 rounded-[1.7rem] bg-gradient-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 py-12"
         >
           <motion.span
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.8, delay: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
             className="text-lg font-bold text-zinc-500"
           >
@@ -150,7 +150,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 0.8, delay: 1.2 }}
+              transition={{ ease: "easeInOut", duration: 0.8, delay: 1 }}
               viewport={{ once: true }}
               src="companies/1.png"
               alt="Company 1"
@@ -159,7 +159,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 1, delay: 1.4 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.2 }}
               viewport={{ once: true }}
               src="companies/2.png"
               alt="Company 2"
@@ -168,7 +168,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 1, delay: 1.6 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.4 }}
               viewport={{ once: true }}
               src="companies/3.png"
               alt="Company 3"
@@ -177,7 +177,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.3 }}
               viewport={{ once: true }}
               src="companies/4.png"
               alt="Company 4"
@@ -186,7 +186,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 1, delay: 1.7 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
               viewport={{ once: true }}
               src="companies/5.png"
               alt="Company 5"
@@ -195,7 +195,7 @@ export default function Certificates() {
             <motion.img
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 1, delay: 1.6 }}
+              transition={{ ease: "easeInOut", duration: 1, delay: 1.4 }}
               viewport={{ once: true }}
               src="companies/6.png"
               alt="Company 6"

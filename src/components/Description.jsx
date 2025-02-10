@@ -9,7 +9,7 @@ export default function Description() {
       className="sm:max-w-auto sm:px-auto max-w-sm px-2"
     >
       <p className="font-semibold text-[#656464]">Hi there, I&apos;m</p>
-      <p className="my-3 bg-gradient-to-r from-[#E52D39] to-[#6129A6] bg-clip-text text-2xl font-extrabold leading-8 text-transparent">
+      <p className="my-3 bg-gradient-to-r from-[#E52D39] to-[#6129A6] bg-clip-text text-2xl font-black leading-8 text-transparent md:font-extrabold">
         Web Developer & <br /> UI/UX Designer
       </p>
 

@@ -17,7 +17,7 @@ export default function Navbar() {
   const { activePage, setActivePage } = useContext(NavbarContext);
 
   return (
-    <div className="fixed top-0 z-50 h-[3.5rem] w-full bg-[#F9F9F9]/70 backdrop-blur-2xl">
+    <div className="fixed top-0 z-50 h-[3.5rem] w-full bg-[#F9F9F9]/50 backdrop-blur-3xl">
       <div className="flex h-full w-full items-center justify-center">
         <nav className="w-full text-[0.9rem] text-slate-900">
           <motion.div
@@ -26,7 +26,7 @@ export default function Navbar() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="container mx-auto flex items-center justify-between px-4 sm:justify-normal"
           >
-            <img src="Logo.png" alt="logo" className="w-8" />
+            <img src="logo4.png" alt="logo" className="w-10" />
             <div className="hidden w-full items-center sm:flex sm:justify-center">
               <ul className="flex space-x-16">
                 <li
