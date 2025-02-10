@@ -82,7 +82,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ y: 80, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeInOut", duration: 0.8, delay: 1 }}
+                  transition={{ ease: "easeInOut", duration: 0.8, delay: 1.6 }}
                   viewport={{ once: true }}
                   className="flex w-full items-center justify-center"
                 >
