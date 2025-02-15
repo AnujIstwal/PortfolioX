@@ -13,13 +13,13 @@ import "swiper/css/effect-coverflow";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const certificates = [
-  { id: 1, src: "certificates/1.jpg", alt: "Certificate 1" },
-  { id: 2, src: "certificates/2.jpg", alt: "Certificate 2" },
-  { id: 3, src: "certificates/3.jpg", alt: "Certificate 3" },
-  { id: 4, src: "certificates/4.jpg", alt: "Certificate 4" },
-  { id: 5, src: "certificates/5.jpg", alt: "Certificate 5" },
-  { id: 6, src: "certificates/6.jpg", alt: "Certificate 6" },
-  { id: 7, src: "certificates/7.jpg", alt: "Certificate 7" },
+  { id: 1, src: "certificates/1.png", alt: "Certificate 1" },
+  { id: 2, src: "certificates/2.png", alt: "Certificate 2" },
+  { id: 3, src: "certificates/3.png", alt: "Certificate 3" },
+  { id: 4, src: "certificates/4.png", alt: "Certificate 4" },
+  { id: 5, src: "certificates/5.png", alt: "Certificate 5" },
+  { id: 6, src: "certificates/6.png", alt: "Certificate 6" },
+  { id: 7, src: "certificates/7.png", alt: "Certificate 7" },
 ];
 
 export default function Certificates() {

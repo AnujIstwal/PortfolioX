@@ -48,7 +48,10 @@ export default function Education() {
 
       <div className="flex w-full flex-col gap-4 pt-4">
         {education.map((data, index) => (
-          <div key={index} className="flex items-center justify-center gap-2">
+          <div
+            key={index}
+            className="flex items-center justify-center gap-2 transition-colors duration-300 hover:bg-neutral-200"
+          >
             <img
               src={data.img}
               alt={data.school}

@@ -11,7 +11,7 @@ const skills = [
   "Software Testing",
   "Frontend",
   "Backend",
-  "+2",
+  "+11",
 ];
 
 export default function HomeLeftSection() {

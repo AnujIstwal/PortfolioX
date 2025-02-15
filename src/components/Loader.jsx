@@ -18,7 +18,7 @@ export default function Loader() {
           transition={{ ease: "easeIn", duration: 0.8, delay: 1.2 }}
           className="bg-gradient-to-r from-zinc-800 to-zinc-500 bg-clip-text text-5xl font-black uppercase text-transparent sm:font-bold"
         >
-          Anuj
+          anuj
         </motion.h1>
       </div>
     </div>

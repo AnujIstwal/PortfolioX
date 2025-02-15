@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavbarProvider } from "./context/NavbarContext";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -22,13 +23,13 @@ const imagePaths = [
   "mui.png",
   "Supabase.png",
   "photoshop.png",
-  "certificates/1.jpg",
-  "certificates/2.jpg",
-  "certificates/3.jpg",
-  "certificates/4.jpg",
-  "certificates/5.jpg",
-  "certificates/6.jpg",
-  "certificates/7.jpg",
+  "certificates/1.png",
+  "certificates/2.png",
+  "certificates/3.png",
+  "certificates/4.png",
+  "certificates/5.png",
+  "certificates/6.png",
+  "certificates/7.png",
   "companies/1.png",
   "companies/2.png",
   "companies/3.png",
@@ -83,6 +84,9 @@ function App() {
         <Projects />
         <Contact />
         <Footer />
+
+        {/* For views analytics -- vercel thing*/}
+        <Analytics />
       </div>
     </NavbarProvider>
   );
