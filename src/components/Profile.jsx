@@ -19,7 +19,7 @@ const interests = [
 
 export default function Profile() {
   return (
-    <div className="flex h-full w-full max-w-[340px] flex-col items-center gap-y-6 rounded-[1.6rem] border border-gray-300 bg-[#DCDCDC]/80 px-4 py-4 shadow-sm">
+    <div className="flex h-full w-full max-w-[310px] flex-col items-center gap-y-6 rounded-[1.6rem] border border-[#C0C0C0] bg-[#DCDCDC]/80 px-4 py-4 shadow-sm">
       {/* Shimmering effect */}
       <motion.span
         animate={{ backgroundPosition: ["-200% 0%", "200% 0%"] }}
@@ -36,10 +36,14 @@ export default function Profile() {
 
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#202020] to-[#4d4d4d]">
-            <img src="profile.png" className="rounded-full" />
+          <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-neutral-100 grayscale">
+            <img
+              src="profile.png"
+              className="scale-110 rounded-full"
+              alt="Profile"
+            />
           </div>
-          <h1 className="mt-2 text-2xl font-bold tracking-wide text-neutral-700">
+          <h1 className="mt-2 text-2xl font-bold tracking-wider text-neutral-700">
             Anuj Kumar
           </h1>
           <div className="mt-1 flex w-full gap-4">
@@ -76,7 +80,7 @@ export default function Profile() {
 
       <div className="mx-auto flex h-full w-full px-2">
         <div className="flex h-full w-full flex-col gap-2 rounded-2xl border border-zinc-300 bg-neutral-100/70 px-4 py-3 shadow-sm">
-          <span className="text-sm font-normal uppercase tracking-wide text-neutral-500">
+          <span className="border-b border-neutral-300 pb-1 text-sm font-semibold uppercase tracking-wide text-neutral-600">
             interests
           </span>
           <div className="flex flex-wrap gap-2 font-mono">
