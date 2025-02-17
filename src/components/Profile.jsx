@@ -19,7 +19,7 @@ const interests = [
 
 export default function Profile() {
   return (
-    <div className="flex h-full w-full max-w-[310px] flex-col items-center gap-y-6 rounded-[1.6rem] border border-[#C0C0C0] bg-[#DCDCDC]/80 px-4 py-4 shadow-sm">
+    <div className="flex h-full w-full max-w-[310px] flex-col items-center gap-y-8 rounded-[1.6rem] border border-[#C0C0C0] bg-[#DCDCDC]/80 px-4 py-4 shadow-sm md:gap-y-6">
       {/* Shimmering effect */}
       <motion.span
         animate={{ backgroundPosition: ["-200% 0%", "200% 0%"] }}
@@ -29,7 +29,7 @@ export default function Profile() {
             "linear-gradient(110deg, #D3EFC8 30%, #dffad4 50%, #D3EFC8 70%)",
           backgroundSize: "200% auto",
         }}
-        className="self-end rounded-full border border-[#09AC00] px-2 py-1 text-xs text-[#09AC00]"
+        className="self-end rounded-full border border-[#09AC00] px-2 py-1 text-[.7rem] text-[#09AC00]"
       >
         Open to work
       </motion.span>

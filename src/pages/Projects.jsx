@@ -76,7 +76,7 @@ export default function Projects() {
           </div>
 
           {/* Project */}
-          <div className="flex h-full w-full items-center justify-center overflow-hidden">
+          <div className="flex h-[480px] w-full items-center justify-center overflow-hidden md:h-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedProject}
@@ -93,7 +93,7 @@ export default function Projects() {
                   <h1 className="z-20 text-nowrap pb-2 text-3xl font-bold tracking-tighter text-zinc-800/90 sm:text-center sm:text-4xl sm:drop-shadow-2xl md:text-5xl">
                     {projects[selectedProject].title || ""}
                   </h1>
-                  <p className="bottom-0 mt-2 text-sm text-zinc-700 sm:max-w-xs md:absolute">
+                  <p className="bottom-0 mt-2 max-w-xs text-justify text-sm text-zinc-700 md:absolute">
                     {projects[selectedProject].description}
                   </p>
                 </div>
