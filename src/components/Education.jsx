@@ -31,7 +31,7 @@ export default function Education() {
       // initial={{ x: 100, opacity: 0 }}
       // whileInView={{ x: 0, opacity: 1 }}
       // transition={{ ease: "easeIn", duration: 0.6 }}
-      className="md:max-w-auto h-full w-full max-w-md rounded-[1.6rem] border border-gray-300 bg-[#DCDCDC]/80 px-8 py-6 shadow-sm"
+      className="md:max-w-auto h-full w-full max-w-md rounded-[1.6rem] border border-[#C0C0C0] bg-[#DCDCDC]/80 px-8 py-6 shadow-sm"
     >
       <div className="flex w-full items-center justify-between border-b border-gray-400/30 pb-2">
         <h3 className="text-lg font-bold text-gray-800">Education</h3>
