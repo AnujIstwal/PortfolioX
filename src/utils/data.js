@@ -50,4 +50,8 @@ const projects = [
 const resume_download_link =
   "https://drive.google.com/uc?export=download&id=1XeMUxrg1gzYQkt9xZWv-pl4ZbHlaG3Zw";
 
-export { projects, resume_download_link };
+const phoneNumber = "918968059548";
+const message = encodeURIComponent("Hello Anuj!");
+const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+export { projects, resume_download_link, whatsappLink };

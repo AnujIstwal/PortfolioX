@@ -12,7 +12,7 @@ export default function About() {
     >
       <div className="h-14 w-full"></div>
       <div className="relative mx-auto flex h-full w-full flex-col items-center justify-center rounded-3xl px-2 py-4 backdrop-opacity-100 md:w-[90%] md:px-10 md:py-8">
-        <div className="flex h-full w-full flex-col gap-y-4 lg:w-[70%]">
+        <div className="flex h-full w-full flex-col gap-y-4 lg:w-[90%] xl:w-[70%]">
           <motion.span
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ export default function About() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex h-full w-full basis-2/5 items-center justify-center p-4 sm:p-6"
+              className="flex h-full w-full basis-[48%] items-center justify-center p-4 sm:p-6"
             >
               <Profile />
             </motion.div>
@@ -53,7 +53,7 @@ export default function About() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex h-full w-full basis-2/5 flex-col items-center px-4 py-5 sm:w-auto"
+              className="flex h-full w-full basis-[48%] flex-col items-center px-4 py-5 sm:w-auto"
             >
               <PersonalDetails />
             </motion.div>
