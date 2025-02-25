@@ -10,13 +10,13 @@ export default function Loader() {
           transition={{ ease: "easeIn", duration: 1 }}
           src="logo4.png"
           alt="loader"
-          className="w-16"
+          className="w-20"
         />
         <motion.h1
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ ease: "easeIn", duration: 0.8, delay: 1.2 }}
-          className="bg-gradient-to-r from-zinc-800 to-zinc-500 bg-clip-text text-5xl font-black uppercase text-transparent sm:font-bold"
+          className="bg-gradient-to-r from-zinc-800 via-zinc-500/90 to-zinc-600 bg-clip-text text-[2.6rem] font-black uppercase tracking-widest text-transparent sm:font-bold"
         >
           anuj
         </motion.h1>
