@@ -56,7 +56,7 @@ function App() {
         if (loadedCount === imagePaths.length) {
           // Wait for an extra 2 seconds before hiding the loader
           setTimeout(() => {
-            setIsLoading(true);
+            setIsLoading(false);
           }, 2000); // 2000ms delay
         }
       };
