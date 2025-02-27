@@ -36,7 +36,7 @@ export default function Profile() {
 
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-neutral-100 grayscale">
+          <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-[#d3d3d3] bg-neutral-100 grayscale">
             <img
               src="profile.png"
               className="scale-110 rounded-full"

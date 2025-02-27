@@ -48,7 +48,7 @@ const projects = [
 ];
 
 const resume_download_link =
-  "https://drive.google.com/uc?export=download&id=1XeMUxrg1gzYQkt9xZWv-pl4ZbHlaG3Zw";
+  "https://drive.google.com/uc?export=download&id=1-dvu2vRXrq1-iJSIHi6oLzBPt6sJVplr";
 
 const phoneNumber = "918968059548";
 const message = encodeURIComponent("Hello Anuj!");
