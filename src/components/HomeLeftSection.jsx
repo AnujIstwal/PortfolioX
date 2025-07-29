@@ -90,7 +90,7 @@ export default function HomeLeftSection() {
         className="flex w-full items-center gap-5 text-[#E6E6E6]"
       >
         <a
-          href="https://drive.google.com/file/d/1-dvu2vRXrq1-iJSIHi6oLzBPt6sJVplr/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1isc-F6LzpbUY5-YKQi6G7ebaJidVpQ22/view?usp=drive_link"
           target="_blank"
           className="group flex grow items-center justify-center gap-1 rounded-[1rem] bg-[#4D4D4D] px-8 py-5 font-medium transition-all duration-300 hover:bg-[#242424]"
         >
