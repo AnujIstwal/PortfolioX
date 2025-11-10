@@ -12,7 +12,10 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^11.17.0",
+<<<<<<< HEAD
     "lottie-react": "^2.4.1",
+=======
+>>>>>>> b5ba18974ab9f20bace35bf729c9d1a4c8b8fa6b
     "motion": "^11.17.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
