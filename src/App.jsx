@@ -6,9 +6,9 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-// import Loader from "./components/Loader";
+
 import LoaderNew from "./components/LoaderNew";
-import Loader from "./components/Loader";
+//import Loader from "./components/Loader";
 import Certificates from "./components/Certificates";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
