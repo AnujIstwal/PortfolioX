@@ -33,7 +33,7 @@ export default function HomeCenterSection() {
               y: 0,
             }}
             transition={{ duration: 1, delay: 2.9, ease: "easeInOut" }}
-            src="anuj.png" // Replace with your actual image
+            src="anuj1.png" // Replace with your actual image
             alt="Anuj Kumar"
             className="z-10 mx-auto h-auto w-72 translate-y-3 transform md:w-96"
           />

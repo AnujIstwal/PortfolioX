@@ -12,6 +12,7 @@ export default function About() {
     >
       <div className="h-14 w-full"></div>
       <div className="relative mx-auto flex h-full w-full flex-col items-center justify-center rounded-3xl px-2 py-4 backdrop-opacity-100 md:w-[90%] md:px-10 md:py-8">
+        {/* <img className="absolute left-4 top-0" src="mask.svg" /> */}
         <div className="flex h-full w-full flex-col gap-y-4 lg:w-[90%] xl:w-[70%]">
           <motion.span
             initial={{ y: 100, opacity: 0 }}

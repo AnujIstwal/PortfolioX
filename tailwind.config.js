@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         rage: ['"Rage Italic"', "cursive"], // Add your custom font
+        sans: ["Poppins", "sans-serif"],
       },
     },
   },
